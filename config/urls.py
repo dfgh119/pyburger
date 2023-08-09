@@ -1,3 +1,4 @@
+#주문을 받는 직원
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from config.views import main #config 폴더의 views.py를 import
 
+#urlpatterns는 리스트, 각 path는 메뉴항목들
 urlpatterns = [
+    #admin 기본정의 항목
     path('admin/', admin.site.urls),
+    path("", main), #공백과 main 함수를 연결
 ]
+
