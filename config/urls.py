@@ -16,12 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from config.views import main #config 폴더의 views.py를 import
+#config 폴더의 views.py를 import
+from config.views import main
+#config 폴더의 views.py burger_list를 import
+from config.views import burger_list
+
 
 #urlpatterns는 리스트, 각 path는 메뉴항목들
 urlpatterns = [
     #admin 기본정의 항목
     path('admin/', admin.site.urls),
+    #path("주소", 함수명) 경로를 지정하지 않으면 main 직원을 호출
     path("", main), #공백과 main 함수를 연결
+    #path("주소", 함수명) burgers 경로로 접근하면 burger_list 직원을 호출
+    path("burgers/", burger_list), #burgers와 burger_list 함수를 연결
+
 ]
 
