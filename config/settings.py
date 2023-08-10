@@ -13,8 +13,12 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+#__file__ : 현재 파일의 경로
+#resolve() : 절대 경로로 변환
+#parent : 부모 디렉토리
+#BASE_DIR 최상위 경로 pyburger 폴더
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+TEMPLATES_DIR = BASE_DIR / "templates" # 새로운 경로 할당
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],#Templates 폴더를 지정해줌
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

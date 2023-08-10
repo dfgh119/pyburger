@@ -30,6 +30,6 @@ urlpatterns = [
     path("", main), #공백과 main 함수를 연결
     #path("주소", 함수명) burgers 경로로 접근하면 burger_list 직원을 호출
     path("burgers/", burger_list), #burgers와 burger_list 함수를 연결
-
+    
 ]
 
