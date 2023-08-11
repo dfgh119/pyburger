@@ -1,0 +1,6 @@
+memo
+
+#python manage.py runserver 서버실행 명령어
+#manage.py startapp burgers application 생성 명령어
+#setting.py installed_apps에 burgers 추가
+#
