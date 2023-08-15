@@ -1,6 +1,21 @@
 memo
 
-#python manage.py runserver 서버실행 명령어
-#manage.py startapp burgers application 생성 명령어
-#setting.py installed_apps에 burgers 추가
-#
+python manage.py runserver 서버실행 명령어
+manage.py startapp burgers application 생성 명령어
+setting.py installed_apps에 burgers 추가
+models.py (데이터베이스 기능) Burger model 정의 
+
+마이그레이션 
+    테이블 생성과 적용, django에서는 sqlite 사용
+    python manage.py migrate #마이그레이션적용
+
+DB Browser for sqlite
+    Database_path = "~/.../worksapce/pyburger/db.sqlite3
+
+1.  python manage.py makemigrations burgers
+    No installed app with label 'burgers'.
+    a.  'burgers'라는 이름의 앱이 프로젝트에 설치되지 않아서 생기는 에러
+        python manage.py startapp burgers 실행
+    
+    b.  python 인터프리터 버전 재선택 (path 경로에 있는 인터프리터로 선택)
+        models.py :Burger(model.Model) -> Burger(models.Model)로 수정
