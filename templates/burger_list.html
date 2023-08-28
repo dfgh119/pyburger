@@ -2,6 +2,14 @@
 <html lang="ko">
     <body>
         <h1>pyburger 의 햄버거 목록입니다.</h1>
+
+        {% for burger in burgers %}
+            <div>
+                <h2>{{ burger.name }}</h2>
+                <p>가격 : {{ burger.price }} 원</p>
+                <p>칼로리 : {{ burger.calories }} kcal</p>
+            </div>
+        {% endfor %}
     </body> 
 </html>
 
