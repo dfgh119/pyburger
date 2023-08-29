@@ -17,5 +17,11 @@ def burger_list(request):# 새로운 View 함수 정의
     return render(request, "burger_list.html", context)
     #HttpResponse 대신 render 함수를 사용
 
+def burger_search(request):
+    keyword = request.GET.get("keyword")
+    print(keyword)
 
+    burgers = Burger.objects.filter(name__contains=keyword)
+    print(burgers)
+    return render(request, "burger_search.html")
 

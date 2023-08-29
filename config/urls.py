@@ -20,7 +20,7 @@ from django.urls import path
 from config.views import main
 #config 폴더의 views.py burger_list를 import
 from config.views import burger_list
-
+from config.views import burger_search
 
 #urlpatterns는 리스트, 각 path는 메뉴항목들
 urlpatterns = [
@@ -30,6 +30,7 @@ urlpatterns = [
     path("", main), #공백과 main 함수를 연결
     #path("주소", 함수명) burgers 경로로 접근하면 burger_list 직원을 호출
     path("burgers/", burger_list), #burgers와 burger_list 함수를 연결
+    path("search/", burger_search), #search와 burger_search 함수를 연결
     
 ]
 
